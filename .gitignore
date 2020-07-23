@@ -1,6 +1,5 @@
-results
-!results/*.m
-!results/ref.csv
 
-omsimulator
-!omsimulator/run.sh
+*.asv
+results/**/.csv
+
+omsimulator/*.ssd
