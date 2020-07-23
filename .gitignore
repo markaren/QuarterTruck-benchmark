@@ -1,0 +1,6 @@
+results
+!results/*.m
+!results/ref.csv
+
+omsimulator
+!omsimulator/run.sh

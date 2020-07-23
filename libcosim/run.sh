@@ -1,0 +1,1 @@
+cosim run -d 10 --output-config "LogConfig.xml" --output-dir="../results/libcosim" ../QuarterTruck_10.ssp
