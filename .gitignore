@@ -1,4 +1,4 @@
-
+*.asv
 results/**/*.csv
 !results/ref.csv
 
