@@ -5,7 +5,7 @@ Example that demonstrates the simulation of SSPs (System Structure and Parameter
 from fmpy.ssp.simulation import simulate_ssp
 from fmpy.util import plot_result, write_csv
 
-step_size = 0.01
+step_size = 0.001
 stop_time = 5
 
 
