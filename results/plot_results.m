@@ -42,7 +42,8 @@ plot(chassis_vico(:,1), chassis_vico(:,3))
 plot(chassis_cosim(:,1), chassis_cosim(:,3))
 plot(t_omsimulator(:,1), chassis_omsimulator)
 
-legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
+legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om");
+legend('Location', 'southeast')
 
 %% Wheel
 
@@ -51,10 +52,11 @@ hold on;
 grid on;
 title("zWheel")
 plot(t_ref, wheel_ref)
-plot(t_fmigo, wheel_fmigo, '-*')
-plot(wheel_fmpy(:,1), wheel_fmpy(:,2), '-.')
-plot(wheel_vico(:,1), wheel_vico(:,3), '-o')
-plot(wheel_cosim(:,1), wheel_cosim(:,3), '-x')
-plot(t_omsimulator(:,1), wheel_omsimulator, '-+')
+plot(t_fmigo, wheel_fmigo)
+plot(wheel_fmpy(:,1), wheel_fmpy(:,2))
+plot(wheel_vico(:,1), wheel_vico(:,3))
+plot(wheel_cosim(:,1), wheel_cosim(:,3))
+plot(t_omsimulator(:,1), wheel_omsimulator)
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
+legend('Location', 'southeast')
