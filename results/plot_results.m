@@ -4,9 +4,10 @@ x = (1:5);
 y = [73.4; 81.1; 37.4; 172; 45];
 
 figure;
+title('Performance benchmark');
 bar(x,y);
-set(gca,'xticklabel', {'libcosim';'fmpy';'vico';'om';'fmigo'})
-
 ylabel('Time[s]')
+set(gca,'xticklabel', {'libcosim';'fmpy';'vico';'om';'fmigo'})
+grid on;
 
-%legend('100hz', '1000hz')
+print('figures/performance.eps', '-depsc')
