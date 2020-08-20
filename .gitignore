@@ -1,4 +1,0 @@
-*.asv
-
-omsimulator/
-!omsimulator/*.sh
