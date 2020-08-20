@@ -44,7 +44,7 @@ plot(t_omsimulator(:,1), chassis_omsimulator)
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 
-print('figures/chassis.eps', '-depsc')
+print('figures/chassis_100hz.eps', '-depsc')
 
 %% Wheel
 
@@ -61,4 +61,4 @@ plot(t_omsimulator(:,1), wheel_omsimulator, '-+')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 
-print('figures/wheel.eps', '-depsc')
+print('figures/wheel_100hz.eps', '-depsc')
