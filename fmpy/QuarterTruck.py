@@ -6,7 +6,7 @@ from fmpy.ssp.simulation import simulate_ssp
 from fmpy.util import plot_result, write_csv
 
 step_size = 0.001
-stop_time = 5
+stop_time = 1000
 
 
 def simulate_quarter_truck(show_plot=False):

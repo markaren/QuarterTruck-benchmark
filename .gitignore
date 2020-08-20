@@ -1,4 +1,6 @@
 *.asv
 
+*.csv
+
 omsimulator/
 !omsimulator/*.sh
