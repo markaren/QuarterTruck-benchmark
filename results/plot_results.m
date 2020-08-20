@@ -44,6 +44,8 @@ plot(t_omsimulator(:,1), chassis_omsimulator)
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 
+print('figures/chassis.eps', '-depsc')
+
 %% Wheel
 
 figure;
@@ -58,3 +60,5 @@ plot(wheel_cosim(:,1), wheel_cosim(:,3), '-x')
 plot(t_omsimulator(:,1), wheel_omsimulator, '-+')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
+
+print('figures/wheel.eps', '-depsc')
