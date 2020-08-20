@@ -45,6 +45,8 @@ plot(t_omsimulator(:,1), chassis_omsimulator)
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om");
 legend('Location', 'southeast')
 
+print('figures/chassis.eps', '-depsc')
+
 %% Wheel
 
 figure;
@@ -60,3 +62,5 @@ plot(t_omsimulator(:,1), wheel_omsimulator)
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 legend('Location', 'southeast')
+
+print('figures/wheel.eps', '-depsc')
