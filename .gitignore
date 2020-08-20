@@ -1,5 +1,5 @@
 *.asv
 
 omsimulator/
-!omsimulator/results.csv
+!results/omsimulator/
 !omsimulator/*.sh
