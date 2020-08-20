@@ -42,10 +42,13 @@ plot(chassis_vico(:,1), chassis_vico(:,3))
 plot(chassis_cosim(:,1), chassis_cosim(:,3))
 plot(t_omsimulator(:,1), chassis_omsimulator)
 
+xlabel('Time[s]')
+ylabel('Vertical displacment[m]')
+
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om");
 legend('Location', 'southeast')
 
-print('figures/chassis.eps', '-depsc')
+print('figures/chassis_1000hz.eps', '-depsc')
 
 %% Wheel
 
@@ -60,7 +63,10 @@ plot(wheel_vico(:,1), wheel_vico(:,3))
 plot(wheel_cosim(:,1), wheel_cosim(:,3))
 plot(t_omsimulator(:,1), wheel_omsimulator)
 
+xlabel('Time[s]')
+ylabel('Vertical displacment[m]')
+
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 legend('Location', 'southeast')
 
-print('figures/wheel.eps', '-depsc')
+print('figures/wheel_1000hz.eps', '-depsc')
