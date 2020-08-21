@@ -2,5 +2,5 @@
 
 *.csv
 
-omsimulator/
-!omsimulator/*.sh
+omsimulator/**
+!omsimulator/run.sh
