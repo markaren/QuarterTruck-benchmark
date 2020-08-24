@@ -17,9 +17,11 @@ File(currentDir, "results/fmigo").mkdirs()
 File(currentDir, "results/omsimulator").mkdirs()
 File(currentDir, "results/fmpy").mkdirs()
 
-val numRuns = 10
+val numRuns = 15
 
-repeat(numRuns) {
+for (i in 0 until numRuns) {
+
+    println("Run $i of $numRuns")
 
     measureTimeMillis {
         "vico simulate-ssp -stop 1000 -dt 0.001 -log \"extra/LogConfig.xml\" -p \"initialValues\" -res \"../results/vico\" ../QuarterTruck_10.ssp".runCommand(
