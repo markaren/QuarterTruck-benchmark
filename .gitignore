@@ -1,6 +1,7 @@
 *.asv
 
 results/**/*.csv
+results/**/*.mat
 !results/*.csv
 
 omsimulator/**

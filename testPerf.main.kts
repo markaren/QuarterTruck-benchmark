@@ -19,7 +19,7 @@ File(currentDir, "results/fmpy").mkdirs()
 
 val numRuns = 15
 
-for (i in 0 until numRuns) {
+for (i in 1 .. numRuns) {
 
     println("Run $i of $numRuns")
 
@@ -31,7 +31,6 @@ for (i in 0 until numRuns) {
         println("Invoking vico took ${elapsed}ms")
         measurments.computeIfAbsent("vico") { mutableListOf() }.add(elapsed)
     }
-
 
     measureTimeMillis {
         "python ssp-launcher.py QuarterTruck_GO.ssp".runCommand(
