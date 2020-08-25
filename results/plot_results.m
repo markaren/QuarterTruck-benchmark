@@ -47,7 +47,7 @@ wheel_oms_rmse = sqrt(mean(wheel_ref_rmse-wheel_om).^2);
 figure;
 hold on;
 grid on;
-title("zChassis")
+title("Vertical displacement of the chassis")
 plot(t_ref, chassis_ref)
 plot(t_fmigo, chassis_fmigo)
 plot(chassis_fmpy(:,1), chassis_fmpy(:,2))
@@ -56,7 +56,7 @@ plot(chassis_cosim(:,1), chassis_cosim(:,3))
 plot(t_om(:,1), chassis_om)
 
 xlabel('Time[s]')
-ylabel('Vertical displacment[m]')
+ylabel('Displacement[m]')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 legend('Location', 'southeast')
@@ -68,7 +68,7 @@ print('figures/chassis_100hz.eps', '-depsc')
 figure;
 hold on;
 grid on;
-title("zWheel")
+title("Vertical displacement of the wheel")
 plot(t_ref, wheel_ref)
 plot(t_fmigo, wheel_fmigo)
 plot(wheel_fmpy(:,1), wheel_fmpy(:,2))
@@ -77,7 +77,7 @@ plot(wheel_cosim(:,1), wheel_cosim(:,3))
 plot(t_om(:,1), wheel_om)
 
 xlabel('Time[s]')
-ylabel('Vertical displacment[m]')
+ylabel('Displacement[m]')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 legend('Location', 'southeast')
@@ -89,7 +89,7 @@ print('figures/wheel_100hz.eps', '-depsc')
 figure;
 hold on;
 grid on;
-title("zWheel")
+title("Vertical displacement of the wheel")
 plot(t_ref, wheel_ref)
 plot(t_fmigo, wheel_fmigo)
 plot(wheel_fmpy(:,1), wheel_fmpy(:,2))
@@ -99,7 +99,7 @@ plot(t_om(:,1), wheel_om)
 
 xlim([0, 0.95]);
 xlabel('Time[s]')
-ylabel('Vertical displacment[m]')
+ylabel('Displacement[m]')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
 
