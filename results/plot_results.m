@@ -25,17 +25,22 @@ wheel_fmigo = fmigo(:,6);
 
 omsimulator = readmatrix("omsimulator/results.csv");
 omsimulator(2:2:end,:) = [];
-t_omsimulator = omsimulator(:,1);
-chassis_omsimulator = omsimulator(:,99);
-wheel_omsimulator = omsimulator(:,46);
+omsimulator(end,:) = [];
+t_om = omsimulator(:,1);
+chassis_om = omsimulator(:,99);
+wheel_om = omsimulator(:,46);
 
 wheel_ref_rmse = wheel_ref(10:10:end,:);
 wheel_ref_rmse(501) = wheel_ref(end);
+
+chassis_ref_rmse = chassis_ref(10:10:end,:);
+chassis_ref_rmse(501) = chassis_ref(end);
 
 wheel_cosim_rmse = sqrt(mean(wheel_ref_rmse-wheel_cosim(:,3)).^2);
 wheel_vico_rmse = sqrt(mean(wheel_ref_rmse-wheel_vico(:,3)).^2);
 wheel_fmigo_rmse = sqrt(mean(wheel_ref_rmse-wheel_fmigo).^2);
 wheel_fmpy_rmse = sqrt(mean(wheel_ref_rmse-wheel_fmpy(:,2)).^2);
+wheel_oms_rmse = sqrt(mean(wheel_ref_rmse-wheel_om).^2);
 
 %% Chassis
 
@@ -48,7 +53,7 @@ plot(t_fmigo, chassis_fmigo)
 plot(chassis_fmpy(:,1), chassis_fmpy(:,2))
 plot(chassis_vico(:,1), chassis_vico(:,3))
 plot(chassis_cosim(:,1), chassis_cosim(:,3))
-plot(t_omsimulator(:,1), chassis_omsimulator)
+plot(t_om(:,1), chassis_om)
 
 xlabel('Time[s]')
 ylabel('Vertical displacment[m]')
@@ -69,7 +74,7 @@ plot(t_fmigo, wheel_fmigo)
 plot(wheel_fmpy(:,1), wheel_fmpy(:,2))
 plot(wheel_vico(:,1), wheel_vico(:,3))
 plot(wheel_cosim(:,1), wheel_cosim(:,3))
-plot(t_omsimulator(:,1), wheel_omsimulator)
+plot(t_om(:,1), wheel_om)
 
 xlabel('Time[s]')
 ylabel('Vertical displacment[m]')
@@ -90,7 +95,7 @@ plot(t_fmigo, wheel_fmigo)
 plot(wheel_fmpy(:,1), wheel_fmpy(:,2))
 plot(wheel_vico(:,1), wheel_vico(:,3))
 plot(wheel_cosim(:,1), wheel_cosim(:,3))
-plot(t_omsimulator(:,1), wheel_omsimulator)
+plot(t_om(:,1), wheel_om)
 
 xlim([0, 0.95]);
 xlabel('Time[s]')
