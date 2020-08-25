@@ -17,15 +17,15 @@ File(currentDir, "results/fmigo").mkdirs()
 File(currentDir, "results/omsimulator").mkdirs()
 File(currentDir, "results/fmpy").mkdirs()
 
-val numRuns = 15
+val numRuns = 1
 
 for (i in 1 .. numRuns) {
 
     println("Run $i of $numRuns")
 
-   /* measureTimeMillis {
-        "vico simulate-ssp -stop 1000 -dt 0.001 -log \"extra/LogConfig.xml\" -p \"initialValues\" -res \"../results/vico\" ../QuarterTruck_10.ssp".runCommand(
-            File(currentDir, "vico")
+    measureTimeMillis {
+        "vico simulate-ssp -stop 1000 -dt 0.001 -log \"extra/LogConfig.xml\" -p \"initialValues\" -res \"../results/vico\" QuarterTruck_10.ssp".runCommand(
+            currentDir
         )
     }.also { elapsed ->
         println("Invoking vico took ${elapsed}ms")
@@ -48,7 +48,7 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking fmpy took ${elapsed}ms")
         measurments.computeIfAbsent("fmpy") { mutableListOf() }.add(elapsed)
-    }*/
+    }
 
     measureTimeMillis {
         "OMSimulator -t=1000 --numProcs=1 ../QuarterTruck_10.ssp".runCommand(
@@ -59,13 +59,32 @@ for (i in 1 .. numRuns) {
         measurments.computeIfAbsent("omsimulator") { mutableListOf() }.add(elapsed)
     }
 
-   /* measureTimeMillis {
+    measureTimeMillis {
         "cosim run -d 1000 --output-config \"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../QuarterTruck_10.ssp".runCommand(
             File(currentDir, "libcosim")
         )
     }.also { elapsed ->
         println("Invoking cosim took ${elapsed}ms")
         measurments.computeIfAbsent("cosim") { mutableListOf() }.add(elapsed)
+    }
+
+
+    /*measureTimeMillis {
+        "vico simulate-ssp -stop 10 -dt 0.001 -log \"extra/LogConfig.xml\" -p \"initialValues\" -res \"../results/vico-proxy\" QuarterTruck_10_proxy.ssp".runCommand(
+            currentDir
+        )
+    }.also { elapsed ->
+        println("Invoking vico-proxy took ${elapsed}ms")
+        measurments.computeIfAbsent("vico-proxy") { mutableListOf() }.add(elapsed)
+    }*/
+
+    /*measureTimeMillis {
+        "cosim run -d 10 --output-config \"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../QuarterTruck_10_proxy.ssp".runCommand(
+            File(currentDir, "libcosim")
+        )
+    }.also { elapsed ->
+        println("Invoking cosim-proxy took ${elapsed}ms")
+        measurments.computeIfAbsent("cosim-proxy") { mutableListOf() }.add(elapsed)
     }*/
 
 }
