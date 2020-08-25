@@ -24,10 +24,18 @@ chassis_fmigo = fmigo(:,3);
 wheel_fmigo = fmigo(:,6);
 
 omsimulator = readmatrix("omsimulator/results.csv");
+omsimulator(2:2:end,:) = [];
 t_omsimulator = omsimulator(:,1);
 chassis_omsimulator = omsimulator(:,99);
 wheel_omsimulator = omsimulator(:,46);
 
+wheel_ref_rmse = wheel_ref(10:10:end,:);
+wheel_ref_rmse(501) = wheel_ref(end);
+
+wheel_cosim_rmse = sqrt(mean(wheel_ref_rmse-wheel_cosim(:,3)).^2);
+wheel_vico_rmse = sqrt(mean(wheel_ref_rmse-wheel_vico(:,3)).^2);
+wheel_fmigo_rmse = sqrt(mean(wheel_ref_rmse-wheel_fmigo).^2);
+wheel_fmpy_rmse = sqrt(mean(wheel_ref_rmse-wheel_fmpy(:,2)).^2);
 
 %% Chassis
 
