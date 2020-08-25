@@ -23,7 +23,7 @@ for (i in 1 .. numRuns) {
 
     println("Run $i of $numRuns")
 
-    measureTimeMillis {
+   /* measureTimeMillis {
         "vico simulate-ssp -stop 1000 -dt 0.001 -log \"extra/LogConfig.xml\" -p \"initialValues\" -res \"../results/vico\" ../QuarterTruck_10.ssp".runCommand(
             File(currentDir, "vico")
         )
@@ -48,10 +48,10 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking fmpy took ${elapsed}ms")
         measurments.computeIfAbsent("fmpy") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
     measureTimeMillis {
-        "OMSimulator -t=1000 --numProcs=2 ../QuarterTruck_10.ssp".runCommand(
+        "OMSimulator -t=1000 --numProcs=1 ../QuarterTruck_10.ssp".runCommand(
             File(currentDir, "omsimulator")
         )
     }.also { elapsed ->
@@ -59,14 +59,14 @@ for (i in 1 .. numRuns) {
         measurments.computeIfAbsent("omsimulator") { mutableListOf() }.add(elapsed)
     }
 
-    measureTimeMillis {
+   /* measureTimeMillis {
         "cosim run -d 1000 --output-config \"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../QuarterTruck_10.ssp".runCommand(
             File(currentDir, "libcosim")
         )
     }.also { elapsed ->
         println("Invoking cosim took ${elapsed}ms")
         measurments.computeIfAbsent("cosim") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
 }
 
