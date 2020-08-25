@@ -46,6 +46,7 @@ xlabel('Time[s]')
 ylabel('Vertical displacment[m]')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
+legend('Location', 'southeast')
 
 print('figures/chassis_100hz.eps', '-depsc')
 
@@ -66,10 +67,11 @@ xlabel('Time[s]')
 ylabel('Vertical displacment[m]')
 
 legend("ref", "fmigo", "fmpy", "vico", "libcosim", "om")
+legend('Location', 'southeast')
 
 print('figures/wheel_100hz.eps', '-depsc')
 
-%% Wheel
+%% Wheel detail
 
 figure;
 hold on;
