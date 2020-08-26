@@ -36,11 +36,11 @@ wheel_ref_rmse(501) = wheel_ref(end);
 chassis_ref_rmse = chassis_ref(10:10:end,:);
 chassis_ref_rmse(501) = chassis_ref(end);
 
-wheel_cosim_rmse = sqrt(mean(wheel_ref_rmse-wheel_cosim(:,3)).^2);
-wheel_vico_rmse = sqrt(mean(wheel_ref_rmse-wheel_vico(:,3)).^2);
-wheel_fmigo_rmse = sqrt(mean(wheel_ref_rmse-wheel_fmigo).^2);
-wheel_fmpy_rmse = sqrt(mean(wheel_ref_rmse-wheel_fmpy(:,2)).^2);
-wheel_oms_rmse = sqrt(mean(wheel_ref_rmse-wheel_om).^2);
+wheel_cosim_rmse = sqrt(mean((wheel_ref_rmse-wheel_cosim(:,3)).^2));
+wheel_vico_rmse = sqrt(mean((wheel_ref_rmse-wheel_vico(:,3)).^2));
+wheel_fmigo_rmse = sqrt(mean((wheel_ref_rmse-wheel_fmigo).^2));
+wheel_fmpy_rmse = sqrt(mean((wheel_ref_rmse-wheel_fmpy(:,2)).^2));
+wheel_oms_rmse = sqrt(mean((wheel_ref_rmse-wheel_om).^2));
 
 %% Chassis
 
