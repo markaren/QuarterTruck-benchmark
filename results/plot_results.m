@@ -30,11 +30,11 @@ t_oms = omsimulator(:,1);
 chassis_oms = omsimulator(:,99);
 wheel_oms = omsimulator(:,46);
 
-wheel_cosim_rmse = sqrt(mean(wheel_ref-wheel_cosim(:,3)).^2);
-wheel_vico_rmse = sqrt(mean(wheel_ref-wheel_vico(:,3)).^2);
-wheel_fmigo_rmse = sqrt(mean(wheel_ref-wheel_fmigo).^2);
-wheel_fmpy_rmse = sqrt(mean(wheel_ref-wheel_fmpy(:,2)).^2);
-wheel_oms_rmse = sqrt(mean(wheel_ref-wheel_oms).^2);
+wheel_cosim_rmse = sqrt(mean((wheel_ref-wheel_cosim(:,3)).^2));
+wheel_vico_rmse = sqrt(mean((wheel_ref-wheel_vico(:,3)).^2));
+wheel_fmigo_rmse = sqrt(mean((wheel_ref-wheel_fmigo).^2));
+wheel_fmpy_rmse = sqrt(mean((wheel_ref-wheel_fmpy(:,2)).^2));
+wheel_oms_rmse = sqrt(mean((wheel_ref-wheel_oms).^2));
 
 %% Chassis
 
