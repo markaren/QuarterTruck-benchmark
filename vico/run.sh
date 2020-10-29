@@ -1,1 +1,1 @@
-vico simulate-ssp -stop 1000 -dt 0.001 -log "extra/LogConfig.xml" -p "initialValues" -res "../results/vico" ../QuarterTruck_10.ssp
+vico simulate-ssp -stop 1000 -dt 0.05 --no-log -p "initialValues" -res "../results/vico" ../Gunnerus.ssp

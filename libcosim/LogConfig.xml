@@ -2,11 +2,5 @@
 
 <simulators xmlns="http://opensimulationplatform.com/LogConfig" timeStampedFileNames="false">
 
-    <simulator name="chassis">
-        <variable name="zChassis"/>
-    </simulator>
-    <simulator name="wheel">
-        <variable name="zWheel"/>
-    </simulator>
-    
+
 </simulators>

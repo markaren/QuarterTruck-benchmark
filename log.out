@@ -1,0 +1,73 @@
+ INFO [Thread-4] (PropulsionLibraryFmu.java:41) - PropulsionLibraryFmu() constructor
+ INFO [Thread-4] (PropulsionLibraryFmu.java:42) - PropulsionLibraryFmu() constructor done
+ INFO [Thread-4] (Version.java:19) - +----------------- SINTEF Ocean Java FMI -----------------+
+ INFO [Thread-4] (Version.java:21) - git.branch=master
+ INFO [Thread-4] (Version.java:21) - git.build.time=2019-06-21T10\:44\:45+0200
+ INFO [Thread-4] (Version.java:21) - git.build.version=1.0.0
+ INFO [Thread-4] (Version.java:21) - git.commit.id=a1f7592af76500d373b413d04ec1c445f06c0f46
+ INFO [Thread-4] (Version.java:21) - git.commit.id.abbrev=a1f7592
+ INFO [Thread-4] (Version.java:21) - git.commit.time=2019-06-21T10\:43\:33+0200
+ INFO [Thread-4] (Version.java:21) - git.tags=
+ INFO [Thread-4] (Version.java:23) - +---------------------------------------------------------+
+ INFO [Thread-4] (Version.java:19) - +----------------- SINTEF Ocean Java FMU -----------------+
+ INFO [Thread-4] (Version.java:21) - git.branch=master
+ INFO [Thread-4] (Version.java:21) - git.build.time=2019-06-12T10\:07\:53+0200
+ INFO [Thread-4] (Version.java:21) - git.build.version=1.0.12
+ INFO [Thread-4] (Version.java:21) - git.commit.id=c9eed81289e26c88047c1d6c1de4ed9c23f55094
+ INFO [Thread-4] (Version.java:21) - git.commit.id.abbrev=c9eed81
+ INFO [Thread-4] (Version.java:21) - git.commit.time=2019-06-12T10\:06\:37+0200
+ INFO [Thread-4] (Version.java:21) - git.tags=
+ INFO [Thread-4] (Version.java:23) - +---------------------------------------------------------+
+ INFO [Thread-4] (LibraryLoader.java:51) - boost_filesystem-vc141-mt-x64-1_69.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - COMCTL32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - COMDLG32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - CRYPT32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - gawn_burrill.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - libifcoremd.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - libifportMD.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - libmmd.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - MSVCP140.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - NETAPI32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - newton_rader.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - ole32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - OLEAUT32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - SHELL32.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - SHLWAPI.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - svml_dispmd.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - sxmtfgen.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - sxudfgen.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - WINTRUST.dll loaded!
+ INFO [Thread-4] (LibraryLoader.java:51) - WS2_32.dll loaded!
+ WARN [Thread-4] (LibraryLoader.java:25) - Unable to load the following libraries:
+C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3251301338566411602\binaries\win64\USER32.dll
+C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3251301338566411602\binaries\win64\VCRUNTIME140.dll
+
+ INFO [Thread-4] (PropulsionLibraryFmu.java:52) - instantiate()
+ INFO [Thread-4] (Version.java:19) - +----------------- Propulsion Library Fmu: sintefjfmu_6af7ed6f-a5f6-4f37-80c3-ae369f78381d -----------------+
+ INFO [Thread-4] (Version.java:21) - git.branch=master
+ INFO [Thread-4] (Version.java:21) - git.build.time=2019-06-21T10\:44\:45+0200
+ INFO [Thread-4] (Version.java:21) - git.build.version=1.0.0
+ INFO [Thread-4] (Version.java:21) - git.commit.id=a1f7592af76500d373b413d04ec1c445f06c0f46
+ INFO [Thread-4] (Version.java:21) - git.commit.id.abbrev=a1f7592
+ INFO [Thread-4] (Version.java:21) - git.commit.time=2019-06-21T10\:43\:33+0200
+ INFO [Thread-4] (Version.java:21) - git.tags=
+ INFO [Thread-4] (Version.java:23) - +-----------------------------------------------------------------------------------------------------------+
+ INFO [Thread-4] (PropulsionLibraryFmu.java:96) - Performing license check
+ INFO [Thread-4] (PropulsionLibraryFmu.java:103) - License valid
+ INFO [Thread-4] (PropulsionLibraryFmu.java:76) - Setting propeller input data file path to: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3251301338566411602\resources
+ INFO [Thread-4] (PropulsionLibraryFmu.java:78) - Propeller input data file path set
+ INFO [Thread-4] (PropulsionLibraryFmu.java:80) - Setting fmu path to: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3251301338566411602
+ INFO [Thread-4] (PropulsionLibraryFmu.java:82) - Fmu path set
+ INFO [Thread-4] (PropulsionLibraryFmu.java:86) - Configuring propulsion library with: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3251301338566411602\resources\propulsors.xml
+ INFO [Thread-4] (PropulsionLibraryFmu.java:88) - Propulsion library configured
+ INFO [Thread-4] (PropulsionLibraryFmu.java:63) - instantiate() done
+ INFO [Thread-4] (PropulsionLibraryFmu.java:119) - initialize()
+ INFO [Thread-4] (PropulsionLibraryFmu.java:126) - initialize() done
+ INFO [Thread-4] (PropulsionLibraryFmu.java:131) - terminate()
+ INFO [Thread-4] (PropulsionLibraryFmu.java:132) - terminate() done
+ INFO [Thread-4] (InternalFmuServiceImpl.kt:116) - Terminated instance of PMAzimuth with status OK
+ INFO [Thread-7] (InternalFmuServiceImpl.kt:131) - FMU-proxy stopped!
+ INFO [Thread-0] (PropulsionLibraryFmu.java:143) - freeInstance()
+ INFO [Thread-0] (PropulsionLibraryFmu.java:144) - Checking license back in
+ INFO [Thread-0] (PropulsionLibraryFmu.java:147) - Licensed checked in
+ INFO [Thread-0] (PropulsionLibraryFmu.java:151) - freeInstance() done
