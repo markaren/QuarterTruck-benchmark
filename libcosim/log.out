@@ -39,11 +39,11 @@
  INFO [Thread-4] (LibraryLoader.java:51) - WINTRUST.dll loaded!
  INFO [Thread-4] (LibraryLoader.java:51) - WS2_32.dll loaded!
  WARN [Thread-4] (LibraryLoader.java:25) - Unable to load the following libraries:
-C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3836266136937582628\binaries\win64\USER32.dll
-C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3836266136937582628\binaries\win64\VCRUNTIME140.dll
+C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth6254841042745121162\binaries\win64\USER32.dll
+C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth6254841042745121162\binaries\win64\VCRUNTIME140.dll
 
  INFO [Thread-4] (PropulsionLibraryFmu.java:52) - instantiate()
- INFO [Thread-4] (Version.java:19) - +----------------- Propulsion Library Fmu: sintefjfmu_4cddc26c-4308-48d9-bc10-8eb507abc35d -----------------+
+ INFO [Thread-4] (Version.java:19) - +----------------- Propulsion Library Fmu: sintefjfmu_bb29db54-248c-4c62-84ab-250e6f510a72 -----------------+
  INFO [Thread-4] (Version.java:21) - git.branch=master
  INFO [Thread-4] (Version.java:21) - git.build.time=2019-06-21T10\:44\:45+0200
  INFO [Thread-4] (Version.java:21) - git.build.version=1.0.0
@@ -54,11 +54,11 @@ C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3836266136937582628\binaries\wi
  INFO [Thread-4] (Version.java:23) - +-----------------------------------------------------------------------------------------------------------+
  INFO [Thread-4] (PropulsionLibraryFmu.java:96) - Performing license check
  INFO [Thread-4] (PropulsionLibraryFmu.java:103) - License valid
- INFO [Thread-4] (PropulsionLibraryFmu.java:76) - Setting propeller input data file path to: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3836266136937582628\resources
+ INFO [Thread-4] (PropulsionLibraryFmu.java:76) - Setting propeller input data file path to: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth6254841042745121162\resources
  INFO [Thread-4] (PropulsionLibraryFmu.java:78) - Propeller input data file path set
- INFO [Thread-4] (PropulsionLibraryFmu.java:80) - Setting fmu path to: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3836266136937582628
+ INFO [Thread-4] (PropulsionLibraryFmu.java:80) - Setting fmu path to: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth6254841042745121162
  INFO [Thread-4] (PropulsionLibraryFmu.java:82) - Fmu path set
- INFO [Thread-4] (PropulsionLibraryFmu.java:86) - Configuring propulsion library with: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth3836266136937582628\resources\propulsors.xml
+ INFO [Thread-4] (PropulsionLibraryFmu.java:86) - Configuring propulsion library with: C:\Users\larsi\AppData\Local\Temp\fmi4j_PMAzimuth6254841042745121162\resources\propulsors.xml
  INFO [Thread-4] (PropulsionLibraryFmu.java:88) - Propulsion library configured
  INFO [Thread-4] (PropulsionLibraryFmu.java:63) - instantiate() done
  INFO [Thread-4] (PropulsionLibraryFmu.java:119) - initialize()

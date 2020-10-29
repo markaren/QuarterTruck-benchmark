@@ -8,7 +8,9 @@ val currentDir = File(".")
 val measurments = mutableMapOf<String, MutableList<Long>>()
 
 val vicoMeasurments = mutableListOf<Long>()
+val vicoMeasurmentsCsv = mutableListOf<Long>()
 val cosimMeasurments = mutableListOf<Long>()
+val cosimMeasurmentsCsv = mutableListOf<Long>()
 
 val numRuns = 15
 
@@ -23,6 +25,15 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking vico took ${elapsed}ms")
         measurments.computeIfAbsent("vico") { mutableListOf() }.add(elapsed)
+    }
+
+    measureTimeMillis {
+        "vico simulate-ssp -stop 1000 -dt 0.05 -p \"initialValues\" -res \"../results/vico\" Gunnerus.ssp".runCommand(
+                currentDir
+        )
+    }.also { elapsed ->
+        println("Invoking vico took ${elapsed}ms")
+        measurments.computeIfAbsent("vicoCsv") { mutableListOf() }.add(elapsed)
     }
 
    /* measureTimeMillis {
@@ -41,6 +52,15 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking cosim took ${elapsed}ms")
         measurments.computeIfAbsent("cosim") { mutableListOf() }.add(elapsed)
+    }
+
+    measureTimeMillis {
+        "cosim run -d 1000 --output-dir=\"../results/libcosim\" ../Gunnerus.ssp".runCommand(
+                File(currentDir, "libcosim")
+        )
+    }.also { elapsed ->
+        println("Invoking cosim took ${elapsed}ms")
+        measurments.computeIfAbsent("cosimCsv") { mutableListOf() }.add(elapsed)
     }
 
 
