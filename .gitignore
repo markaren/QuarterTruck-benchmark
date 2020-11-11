@@ -6,3 +6,5 @@ results/**/*.mat
 
 omsimulator/**
 !omsimulator/run.sh
+
+log.out

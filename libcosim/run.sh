@@ -1,1 +1,1 @@
-cosim run -d 1000 --output-config "LogConfig.xml" --output-dir="../results/libcosim" ../QuarterTruck_10.ssp
+cosim run -d 1000 --output-dir="../results/libcosim" ../QuarterTruck_100hz.ssp

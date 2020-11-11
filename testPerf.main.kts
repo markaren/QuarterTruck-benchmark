@@ -18,13 +18,16 @@ File(currentDir, "results/omsimulator").mkdirs()
 File(currentDir, "results/fmpy").mkdirs()
 
 val numRuns = 1
+val tStop = 1000
+val hz = 1000
+val dt = 1.0/hz
 
 for (i in 1 .. numRuns) {
 
     println("Run $i of $numRuns")
 
     measureTimeMillis {
-        "vico simulate-ssp -stop 1000 -dt 0.001 -log \"extra/LogConfig.xml\" -p \"initialValues\" -res \"../results/vico\" QuarterTruck_10.ssp".runCommand(
+        "vico simulate-ssp -stop $tStop -dt $dt --no-parallel --no-log -p \"initialValues\" -res \"../results/vico\" QuarterTruck_${hz}hz.ssp".runCommand(
             currentDir
         )
     }.also { elapsed ->
@@ -32,26 +35,26 @@ for (i in 1 .. numRuns) {
         measurments.computeIfAbsent("vico") { mutableListOf() }.add(elapsed)
     }
 
-    measureTimeMillis {
-        "python ssp-launcher.py QuarterTruck_GO.ssp".runCommand(
+   /* measureTimeMillis {
+        "python ssp-launcher.py QuarterTruck_${hz}hz.ssp".runCommand(
             File(currentDir, "fmigo")
         )
     }.also { elapsed ->
         println("Invoking fmigo took ${elapsed}ms")
         measurments.computeIfAbsent("fmigo") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
-    measureTimeMillis {
+   /* measureTimeMillis {
         "python QuarterTruck.py".runCommand(
             File(currentDir, "fmpy")
         )
     }.also { elapsed ->
         println("Invoking fmpy took ${elapsed}ms")
         measurments.computeIfAbsent("fmpy") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
-    measureTimeMillis {
-        "OMSimulator -t=1000 --numProcs=1 ../QuarterTruck_10.ssp".runCommand(
+   /* measureTimeMillis {
+        "OMSimulator -t=$tStop --numProcs=1 ../QuarterTruck_${hz}hz.ssp".runCommand(
             File(currentDir, "omsimulator")
         )
     }.also { elapsed ->
@@ -60,13 +63,13 @@ for (i in 1 .. numRuns) {
     }
 
     measureTimeMillis {
-        "cosim run -d 1000 --output-config \"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../QuarterTruck_10.ssp".runCommand(
+        "cosim run -d $tStop --output-dir=\"../results/libcosim\" ../QuarterTruck_${hz}hz.ssp".runCommand(
             File(currentDir, "libcosim")
         )
     }.also { elapsed ->
         println("Invoking cosim took ${elapsed}ms")
         measurments.computeIfAbsent("cosim") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
 
     /*measureTimeMillis {
