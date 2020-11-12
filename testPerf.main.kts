@@ -14,7 +14,7 @@ val perfDir = File(currentDir, "results/performance").apply {
     mkdirs()
 }
 
-val numRuns = 1
+val numRuns = 15
 val tStop = 1000
 val hz = 1000
 val dt = 1.0/hz

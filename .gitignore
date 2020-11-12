@@ -2,7 +2,7 @@
 
 results/**/*.csv
 results/**/*.mat
-!results/*.csv
+!results/performance*.csv
 
 omsimulator/**
 !omsimulator/run.sh
