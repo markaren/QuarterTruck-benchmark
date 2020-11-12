@@ -3,3 +3,5 @@
 omsimulator/
 !results/omsimulator/
 !omsimulator/*.sh
+
+results/performance
