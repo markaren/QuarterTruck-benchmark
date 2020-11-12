@@ -1,1 +1,1 @@
-vico simulate-ssp -stop 5 -dt 0.01 -log "extra/LogConfig.xml" -p "initialValues" -res "../results/vico" ../QuarterTruck_10.ssp
+vico simulate-ssp -stop 5 -dt 0.01 --no-parallel -log "LogConfig.xml" -p "initialValues" -res "../results/vico" ../QuarterTruck_100hz.ssp
