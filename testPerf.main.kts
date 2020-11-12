@@ -24,7 +24,7 @@ for (i in 1 .. numRuns) {
     println("Run $i of $numRuns")
 
 
-    measureTimeMillis {
+   /* measureTimeMillis {
         "vico simulate-ssp -stop $tStop -dt $dt --no-parallel --no-log -p \"initialValues\" -res \"../results/vico\" QuarterTruck_${hz}hz.ssp".runCommand(
             currentDir
         )
@@ -62,12 +62,19 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking fmpy took ${elapsed}ms")
         measurements.computeIfAbsent("fmpy") { mutableListOf() }.add(elapsed)
-    }
-
-
+    }*/
 
     measureTimeMillis {
         "OMSimulator -t=$tStop --numProcs=1 ../QuarterTruck_${hz}hz.ssp".runCommand(
+            File(currentDir, "omsimulator")
+        )
+    }.also { elapsed ->
+        println("Invoking omsimulatorMat took ${elapsed}ms")
+        measurements.computeIfAbsent("omsimulator") { mutableListOf() }.add(elapsed)
+    }
+
+    /*measureTimeMillis {
+        "OMSimulator -t=$tStop --numProcs=1 ../QuarterTruck_${hz}hz_mat.ssp".runCommand(
             File(currentDir, "omsimulator")
         )
     }.also { elapsed ->
@@ -82,10 +89,10 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking omsimulatorCsv took ${elapsed}ms")
         measurements.computeIfAbsent("omsimulatorCsv") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
 
-
+/*
     measureTimeMillis {
         "cosim run -d $tStop --output-config=\"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../QuarterTruck_${hz}hz.ssp".runCommand(
             File(currentDir, "libcosim")
@@ -102,7 +109,7 @@ for (i in 1 .. numRuns) {
     }.also { elapsed ->
         println("Invoking cosimCsv took ${elapsed}ms")
         measurements.computeIfAbsent("cosimCsv") { mutableListOf() }.add(elapsed)
-    }
+    }*/
 
 
 }
