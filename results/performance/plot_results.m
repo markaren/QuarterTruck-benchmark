@@ -17,7 +17,7 @@ y = [fmigo fmpy cosim cosimCsv om omCsv vico vicoCsv];
 figure;
 hold on;
 boxplot(y, 0);
-title('Performance benchmark');
+title('Quarter-truck performance benchmark');
 ylabel('Time[s]')
 set(gca,'xticklabel', {'fmigo';'fmpy';'cosim';'cosimCsv';'om';'omCsv';'vico';'vicoCsv'})
 grid on;
