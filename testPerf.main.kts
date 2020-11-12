@@ -14,9 +14,9 @@ val perfDir = File(currentDir, "results/performance").apply {
     mkdirs()
 }
 
-val numRuns = 15
-val tStop = 1000
-val hz = 1000
+val numRuns = 1
+val tStop = 250
+val hz = 50
 val dt = 1.0/hz
 
 for (i in 1 .. numRuns) {
@@ -25,7 +25,7 @@ for (i in 1 .. numRuns) {
 
 
    /* measureTimeMillis {
-        "vico simulate-ssp -stop $tStop -dt $dt --no-parallel --no-log -p \"initialValues\" -res \"../results/vico\" QuarterTruck_${hz}hz.ssp".runCommand(
+        "vico simulate-ssp -stop $tStop -dt $dt --no-parallel --no-log -p \"initialValues\" -res \"../results/vico\" gunnerus-trajectory-proxy.ssp".runCommand(
             currentDir
         )
     }.also { elapsed ->
@@ -34,7 +34,7 @@ for (i in 1 .. numRuns) {
     }
 
     measureTimeMillis {
-        "vico simulate-ssp -stop $tStop -dt $dt --no-parallel -p \"initialValues\" -res \"../results/vico\" QuarterTruck_${hz}hz.ssp".runCommand(
+        "vico simulate-ssp -stop $tStop -dt $dt --no-parallel -p \"initialValues\" -res \"../results/vico\" gunnerus-trajectory-proxy.ssp".runCommand(
             currentDir
         )
     }.also { elapsed ->
@@ -45,7 +45,7 @@ for (i in 1 .. numRuns) {
 
 
     measureTimeMillis {
-        "python ssp-launcher.py QuarterTruck_${hz}hz.ssp".runCommand(
+        "python ssp-launcher.py gunnerus-trajectory-proxy.ssp".runCommand(
             File(currentDir, "fmigo")
         )
     }.also { elapsed ->
@@ -65,16 +65,16 @@ for (i in 1 .. numRuns) {
     }*/
 
     measureTimeMillis {
-        "OMSimulator -t=$tStop --numProcs=1 ../QuarterTruck_${hz}hz.ssp".runCommand(
+        "OMSimulator -t=$tStop --numProcs=0 ../gunnerus-trajectory-proxy.ssp".runCommand(
             File(currentDir, "omsimulator")
         )
     }.also { elapsed ->
-        println("Invoking omsimulatorMat took ${elapsed}ms")
+        println("Invoking omsimulator took ${elapsed}ms")
         measurements.computeIfAbsent("omsimulator") { mutableListOf() }.add(elapsed)
     }
 
     /*measureTimeMillis {
-        "OMSimulator -t=$tStop --numProcs=1 ../QuarterTruck_${hz}hz_mat.ssp".runCommand(
+        "OMSimulator -t=$tStop --numProcs=1 ../gunnerus-trajectory-proxy_mat.ssp".runCommand(
             File(currentDir, "omsimulator")
         )
     }.also { elapsed ->
@@ -83,7 +83,7 @@ for (i in 1 .. numRuns) {
     }
 
     measureTimeMillis {
-        "OMSimulator -t=$tStop --numProcs=1 ../QuarterTruck_${hz}hz_csv.ssp".runCommand(
+        "OMSimulator -t=$tStop --numProcs=1 ../gunnerus-trajectory-proxy_csv.ssp".runCommand(
             File(currentDir, "omsimulator")
         )
     }.also { elapsed ->
@@ -94,7 +94,7 @@ for (i in 1 .. numRuns) {
 
 /*
     measureTimeMillis {
-        "cosim run -d $tStop --output-config=\"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../QuarterTruck_${hz}hz.ssp".runCommand(
+        "cosim run -d $tStop --output-config=\"LogConfig.xml\" --output-dir=\"../results/libcosim\" ../gunnerus-trajectory-proxy.ssp".runCommand(
             File(currentDir, "libcosim")
         )
     }.also { elapsed ->
@@ -103,7 +103,7 @@ for (i in 1 .. numRuns) {
     }
 
     measureTimeMillis {
-        "cosim run -d $tStop --output-dir=\"../results/libcosim\" ../QuarterTruck_${hz}hz.ssp".runCommand(
+        "cosim run -d $tStop --output-dir=\"../results/libcosim\" ../gunnerus-trajectory-proxy.ssp".runCommand(
             File(currentDir, "libcosim")
         )
     }.also { elapsed ->

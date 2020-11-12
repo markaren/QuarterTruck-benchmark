@@ -1,2 +1,2 @@
 mkdir -p ../results/omsimulator
-OMSimulator -t=1000 --numProcs=1 ../QuarterTruck_100hz.ssp
+OMSimulator -t=500 --numProcs=0 ../gunnerus-trajectory-proxy.ssp

@@ -2,7 +2,7 @@ clc,clear, close all;
 
 
 fmigo = readmatrix('fmigo.csv') ./ 1000;
-fmpy = readmatrix('fmpy.csv') ./ 1000;
+%fmpy = readmatrix('fmpy.csv') ./ 1000;
 om = readmatrix('omsimulator.csv') ./ 1000;
 omMat = readmatrix('omsimulatorMat.csv') ./ 1000;
 omCsv = readmatrix('omsimulatorCsv.csv') ./ 1000;
@@ -18,11 +18,11 @@ y = [fmigo fmpy cosim cosimCsv om omMat omCsv vico vicoCsv];
 figure;
 hold on;
 boxplot(y, 0);
-title('Quarter-truck performance benchmark');
+title('Gunnerus performance benchmark');
 ylabel('Time[s]')
 set(gca,'xticklabel', {'fmigo';'fmpy';'cosim';'cosimCsv';'om';'omMat';'omCsv';'vico';'vicoCsv'})
 grid on;
-set(gca,'Ytick',0:10:170)
+%set(gca,'Ytick',0:10:170)
 
 
-print('../figures/performance.eps', '-depsc')
+print('../figures/performance2.eps', '-depsc')
