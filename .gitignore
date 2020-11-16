@@ -8,5 +8,6 @@ omsimulator/**
 !omsimulator/run.sh
 
 log.out
+hs_err_pid*.log
 
 gunnerus-trajectory-proxy.ssp

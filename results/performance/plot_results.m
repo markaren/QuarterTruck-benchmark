@@ -15,14 +15,14 @@ cosimCsv = readmatrix('cosimCsv.csv') ./ 1000;
 
 
 x = (1:6);
-y = [cosim cosimCsv vico vicoCsv vicoSingle];
+y = [cosim cosimCsv vico vicoCsv];
 
 figure;
 hold on;
 boxplot(y, 0);
 title('Gunnerus performance benchmark');
 ylabel('Time[s]')
-set(gca,'xticklabel', {'cosim';'cosimCsv';'vico';'vicoCsv';'vicoSingle'})
+set(gca,'xticklabel', {'cosim';'cosimCsv';'vico';'vicoCsv'})
 grid on;
 %set(gca,'Ytick',0:10:170)
 
